@@ -51,7 +51,7 @@ def recursiveGlob( dir ):
     return matches
 
 libyara = env.Command(
-        target = os.path.join( '#', env[ 'BUILD_DIR' ], 'libyara.o' ),
+        target = os.path.join( '#', env[ 'BUILD_DIR' ], 'libyara.a' ),
         source = [],
         action = Action( BuildLibYara, strfunction = log_output_fn )
         )
